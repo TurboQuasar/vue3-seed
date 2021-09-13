@@ -1,0 +1,15 @@
+POST {{baseUrl}}/access/login
+Content-Type: application/json
+
+{"account":"18896781025","approve":1,"captcha":"123456","password":"q12345","platform":"PC_WEB"}
+
+###
+###
+
+GET {{baseUrl}}/access/exist?account=18896781024
+Accept: application/json
+
+###
+
+GET {{baseUrl}}/access/login/captcha?account=18896781024
+

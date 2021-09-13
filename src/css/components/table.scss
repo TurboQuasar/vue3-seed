@@ -1,0 +1,94 @@
+@import "../quasar.variables";
+@mixin table {
+  thead {
+    tr {
+      th {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        color: $gray-400;
+        padding-top: 16px;
+        padding-bottom: 14px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(2n + 1) {
+        background-color: #fbfbfb;
+      }
+      &:hover {
+        background-color: #ffffff;
+        box-shadow: 0 5px 15px 0 rgba(222, 221, 221, 0.5);
+      }
+      td {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 17px;
+        color: $gray-400;
+        height: 70px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+  .q-table__top {
+    width: 100%;
+    min-height: 85px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 10px;
+    .q-field {
+      .q-field__before {
+        height: 30px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #808080;
+        line-height: 20px;
+      }
+      .q-field__inner {
+        .q-field__control {
+          width: 140px;
+          height: 30px;
+          font-size: 12px;
+          font-weight: 400;
+          color: #808080;
+          line-height: 17px;
+          padding: 0 7px;
+          min-height: 30px !important;
+          .q-field__control-container {
+            padding-top: 0;
+            .q-field__native {
+              min-height: 30px;
+            }
+          }
+          .q-field__append {
+            height: 30px;
+          }
+        }
+        .q-field__control:before {
+          border: 1px solid #b1b1b1;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+  .q-table__bottom {
+    background-color: #ffffff;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    border-top: none;
+    &--nodata {
+      flex-grow: 9999;
+    }
+  }
+  .q-table__grid-content {
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-top: 20px;
+    align-content: start;
+  }
+}

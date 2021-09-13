@@ -1,0 +1,86 @@
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass/SCSS variables found in Quasar's source Sass/SCSS files.
+
+// Check documentation for full list of Quasar variables
+
+// Your own variables (that are declared here) and Quasar's own
+// ones will be available out of the box in your .vue/.scss/.sass files
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+// https://quasar.dev/style/sass-scss-variables
+
+@import "base";
+//===========================================custom vars======================//
+
+
+$gray-100: #EEEEEE;
+$gray-200: #DADADA;
+$gray-300: #707070;
+$gray-400: #333333;
+$gray-500: #1E1E2C;
+
+$orange: #FF7327;
+$red: #FC8484;
+$blue: #6299FD;
+$purple: #928CF5;
+$brand: $blue;
+// custom var 使用三位数字
+.text-brand {
+  color: $brand;
+}
+.text-gray-100 {
+  color: $gray-100;
+}
+.text-gray-200 {
+  color: $gray-200;
+}
+.text-gray-300 {
+  color: $gray-300;
+}
+.text-gray-400 {
+  color: $gray-400;
+}
+.text-gray-500 {
+  color: $gray-500;
+}
+.bg-gray-100 {
+  background-color: $gray-100;
+}
+.bg-gray-200 {
+  background-color: $gray-200;
+}
+.bg-gray-300 {
+  background-color: $gray-300;
+}
+.bg-gray-400 {
+  background-color: $gray-400;
+}
+.bg-gray-500 {
+  background-color: $gray-500;
+}
+.bg-brand {
+  background-color: $brand;
+}
+// additional colors
+@each $color in (f7f7f7,#f7f7f7),(54d6be, #54d6be),(5398ff,#5398ff),(ffafa5,#ffafa5),(f2f8ff,#f2f8ff),(6b9df7,#6b9df7),(6b9df7,#b9df7),(808080, #808080),(6299fd,#6299fd) {
+  .text-#{nth($color,1)} {
+    color:  nth($color,2);
+  }
+  .bg-#{nth($color,1)} {
+    background-color:  nth($color,2);
+  }
+}
+// =================component vars========
+$home-bg: #232323;
+$home-footer-bg: #272727;
+$home-container-width: 1200px;
+.bg-home-header, .bg-home-body {
+  background-color: $home-bg!important;
+}
+.bg-home-footer {
+  background-color: $home-footer-bg!important;
+}

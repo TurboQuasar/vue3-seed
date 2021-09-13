@@ -1,0 +1,3 @@
+@each $b in (1,solid,dadada, #dadada),(2,solid,dadada, #dadada)
+  .border-#{nth($b,1)}-#{nth($b,2)}-#{nth($b,3)}
+    border: (1px * nth($b,1)) nth($b,2) nth($b,4)

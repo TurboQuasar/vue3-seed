@@ -1,0 +1,119 @@
+{
+  "name": "xxx",
+  "version": "0.0.1",
+  "description": "xxxxxxxx",
+  "productName": "xxx",
+  "author": "gxkai <30716965+gxkai@users.noreply.github.com>",
+  "private": true,
+  "scripts": {
+    "dev": "DOT_ENV=dev quasar dev",
+    "build:dev": "DOT_ENV=dev standard-version && git push && DOT_ENV=dev quasar build",
+    "build:sit": "DOT_ENV=sit standard-version && git push && DOT_ENV=sit quasar build",
+    "build": "DOT_ENV=prod standard-version && git push && DOT_ENV=prod quasar build",
+    "lint": "eslint --fix --ext .js,.ts,.vue ./",
+    "test": "echo \"No test specified\" && exit 0",
+    "update": "yarn upgrade-interactive [--latest]",
+    "deploy:dev": "./deploy.sh 121.40.18.70 1000",
+    "deploy:sit": "./deploy.sh 123.60.47.217"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.21.1",
+    "big.js": "^6.1.1",
+    "core-js": "^3.6.5",
+    "crypto-js": "^4.1.1",
+    "faker": "^5.5.3",
+    "lodash": "^4.17.21",
+    "miragejs": "^0.1.41",
+    "quasar": "^2.0.0",
+    "typescript-json-serializer": "^3.3.0",
+    "vue-i18n": "^9.0.0-beta.0",
+    "vuex": "^4.0.1",
+    "vuex-persistedstate": "^4.0.0-beta.3",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.13.14",
+    "@intlify/vue-i18n-loader": "^2.1.0",
+    "@quasar/app": "^3.0.0",
+    "@types/big.js": "^6.1.2",
+    "@types/crypto-js": "^4.0.2",
+    "@types/faker": "^5.5.5",
+    "@types/jest": "^27.0.1",
+    "@types/lodash": "^4.14.169",
+    "@types/node": "^10.17.15",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.0.1",
+    "compression-webpack-plugin": "^1.1.12",
+    "detect-indent": "^6.1.0",
+    "detect-newline": "^3.1.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "jest": "^27.1.0",
+    "miragejs": "^0.1.41",
+    "null-loader": "^4.0.1",
+    "prettier": "^2.3.0",
+    "raw-loader": "^4.0.2",
+    "standard-version": "^9.3.1",
+    "stringify-package": "^1.0.1",
+    "ts-jest": "^27.0.5"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 16",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "standard-version": {
+    "skip": {
+      "changelog": false,
+      "bump": false,
+      "commit": false,
+      "tag": true
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "node_modules/variables/.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
+    ],
+    "moduleNameMapper": {
+      "^store/(.*)": "<rootDir>/src/store/$1",
+      "^utils/(.*)": "<rootDir>/src/utils/$1",
+      "^router/(.*)": "<rootDir>/src/router/$1",
+      "^components/(.*)": "<rootDir>/src/components/$1",
+      "^boot/(.*)": "<rootDir>/src/boot/$1",
+      "^css/(.*)": "<rootDir>/src/css/$1",
+      "^mock/(.*)": "<rootDir>/src/mock/$1",
+      "^models/(.*)": "<rootDir>/src/models/$1",
+      "^enums/(.*)": "<rootDir>/src/enums/$1",
+      "^classes/(.*)": "<rootDir>/src/classes/$1",
+      "^i18n/(.*)": "<rootDir>/src/i18n/$1",
+      "^hooks/(.*)": "<rootDir>/src/hooks/$1",
+      "^plugins/(.*)": "<rootDir>/src/plugins/$1",
+      "^constants/(.*)": "<rootDir>/src/constants/$1",
+      "^layouts/(.*)": "<rootDir>/src/layouts/$1",
+      "^src/(.*)": "<rootDir>/src/$1",
+      "^api/(.*)": "<rootDir>/api/$1"
+    }
+  }
+}
