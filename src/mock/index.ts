@@ -1,4 +1,4 @@
-import { createServer, Factory, Model, Response } from 'miragejs';
+import { createServer, Factory, Model } from 'miragejs';
 import { config } from 'boot/config';
 import {
   BookFactories,
